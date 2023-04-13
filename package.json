@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "test": "hermione tests/test.hermione.js"
+  },
+  "devDependencies": {
+    "allure-hermione": "^2.1.0",
+    "chai": "^4.3.7",
+    "hermione": "5.3.1"
+  }
+}
