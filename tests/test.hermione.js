@@ -6,97 +6,101 @@ it("should pass", async function () {
 });
 
 it("fail 3 step", async ({ browser, currentTest }) => {
-  const items = await browser.$$(".w-gl__result");
-  await browser.url("https://www.startpage.com/");
+  const items = await browser.$$(".serp-item_card-has-warning");
+  await browser.url("https://ya.ru/");
 
   await browser.step(currentTest.id(), "делаем раз", async () => {
-    await browser.$("#q").setValue("hello world");
+    await browser.$(".search3__input").setValue("hello world");
   });
 
   await browser.step(currentTest.id(), "жмяк на кнопку поиска", async () => {
-    await browser.$("#search-btn").click();
+    await browser.$(".search3__button").click();
   });
 
   await browser.step(currentTest.id(), "и падает тут ассерт", async () => {
-    assert.equal(items.length, 3);
+    assert.equal(items.length, +0);
   });
 
-  await browser.step(currentTest.id(), "видео на странице есть", async () => {
-    await browser.$(".sx-video-info").isExisting();
-  });
+  await browser.step(
+    currentTest.id(),
+    "на странице есть ворнинги",
+    async () => {
+      await browser.$(".WikiArticle").isExisting();
+    }
+  );
 });
 
 it("fail 1 step", async ({ browser, currentTest }) => {
-  const items = await browser.$$(".w-gl__result");
-  await browser.url("https://www.startpage.com/");
-
-  await browser.step(
-    currentTest.id(),
-    "не находим поисковую строку",
-    async () => {
-      await browser.$("#p").setValue("hello world");
-    }
-  );
-
-  await browser.step(currentTest.id(), "жмяк на кнопку поиска", async () => {
-    await browser.$("#search-btn").click();
-  });
-
-  await browser.step(currentTest.id(), "ассерт", async () => {
-    assert.equal(items.length, +0);
-  });
-
-  await browser.step(currentTest.id(), "видео на странице есть", async () => {
-    await browser.$(".sx-video-info").isExisting();
-  });
-});
-
-it.skip("fail all steps", async ({ browser, currentTest }) => {
-  const items = await browser.$$(".w-gl__result");
-  await browser.url("https://www.startpage.com/");
-
-  await browser.step(currentTest.id(), "теряем поисковую строку", async () => {
-    await browser.$("#p").setValue("hello world");
-  });
-
-  await browser.step(
-    currentTest.id(),
-    "жмяк на кнопку поиска, а кнопки нет",
-    async () => {
-      await browser.$("#search-bn").click();
-    }
-  );
-
-  await browser.step(currentTest.id(), "и падает тут ассерт", async () => {
-    assert.equal(items.length, 0);
-  });
-
-  await browser.step(
-    currentTest.id(),
-    "видео на странице есть, а мы не находим",
-    async () => {
-      await browser.$(".sx-video-ino").isExisting();
-    }
-  );
-});
-
-it.skip("pass all steps", async ({ browser, currentTest }) => {
-  const items = await browser.$$(".w-gl__result");
-  await browser.url("https://www.startpage.com/");
+  const items = await browser.$$(".serp-item_card-has-warning");
+  await browser.url("https://ya.ru/");
 
   await browser.step(currentTest.id(), "делаем раз", async () => {
-    await browser.$("#q").setValue("hello world");
+    await browser.$(".search__inut").setValue("hello world");
   });
 
   await browser.step(currentTest.id(), "жмяк на кнопку поиска", async () => {
-    await browser.$("#search-btn").click();
+    await browser.$(".search3__button").click();
   });
 
-  await browser.step(currentTest.id(), "ассерт", async () => {
+  await browser.step(currentTest.id(), "не падает ассерт", async () => {
     assert.equal(items.length, +0);
   });
 
-  await browser.step(currentTest.id(), "видео на странице есть", async () => {
-    await browser.$(".sx-video-info").isExisting();
+  await browser.step(
+    currentTest.id(),
+    "на странице есть ворнинги",
+    async () => {
+      await browser.$(".WikiArticle").isExisting();
+    }
+  );
+});
+
+it("fail all steps", async ({ browser, currentTest }) => {
+  const items = await browser.$$(".serp-item_card-has-warning");
+  await browser.url("https://ya.ru/");
+
+  await browser.step(currentTest.id(), "делаем раз", async () => {
+    await browser.$(".search__inut").setValue("hello world");
   });
+
+  await browser.step(currentTest.id(), "жмяк на кнопку поиска", async () => {
+    await browser.$(".search__btton").click();
+  });
+
+  await browser.step(currentTest.id(), "и падает тут ассерт", async () => {
+    assert.equal(items.length, 4);
+  });
+
+  await browser.step(
+    currentTest.id(),
+    "на странице есть ворнинги",
+    async () => {
+      await browser.$(".WikiArticle").isExisting();
+    }
+  );
+});
+
+it("pass all steps", async ({ browser, currentTest }) => {
+  const items = await browser.$$(".serp-item_card-has-warning");
+  await browser.url("https://ya.ru/");
+
+  await browser.step(currentTest.id(), "делаем раз", async () => {
+    await browser.$(".search3__input").setValue("hello world");
+  });
+
+  await browser.step(currentTest.id(), "жмяк на кнопку поиска", async () => {
+    await browser.$(".search3__button").click();
+  });
+
+  await browser.step(currentTest.id(), "и падает тут ассерт", async () => {
+    assert.equal(items.length, +0);
+  });
+
+  await browser.step(
+    currentTest.id(),
+    "на странице есть ворнинги",
+    async () => {
+      await browser.$(".WikiArticle").isExisting();
+    }
+  );
 });
