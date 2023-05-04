@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "hermione tests/test.hermione.js"
+    "test": "hermione tests/test.hermione.js",
+    "test_throw": "hermione tests/test_throw.hermione.js"
   },
   "devDependencies": {
     "allure-hermione": "^2.2.1",
