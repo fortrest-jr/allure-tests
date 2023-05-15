@@ -1,10 +1,12 @@
 {
   "scripts": {
-    "test": "hermione tests/test.hermione.js"
+    "test": "hermione tests/test.hermione.js",
+    "test_throw": "hermione tests/test_throw.hermione.js"
   },
   "devDependencies": {
-    "allure-hermione": "^2.2.0",
+    "allure-hermione": "^2.3.0",
     "chai": "^4.3.7",
-    "hermione": "5.3.1"
+    "hermione": "5.3.1",
+    "hermione-test-repeater": "^0.0.8"
   }
 }

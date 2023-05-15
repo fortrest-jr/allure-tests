@@ -6,15 +6,22 @@ module.exports = {
         browserName: "chrome",
       },
     },
-    chrome2: {
-      desiredCapabilities: {
-        browserName: "chrome",
-      },
-    },
+    // chrome2: {
+    //   desiredCapabilities: {
+    //     browserName: "chrome",
+    //   },
+    // },
   },
   plugins: {
     "allure-hermione": {
       resultsDir: "./allure-results",
+    },
+    "hermione-test-repeater": {
+      enabled: true,
+      repeat: 10,
+      minRepeat: 10,
+      maxRepeat: 100,
+      uniqSession: true,
     },
   },
 };
