@@ -4,8 +4,8 @@
     "test_throw": "hermione tests/test_throw.hermione.js"
   },
   "devDependencies": {
-    "allure-hermione": "^2.2.1",
+    "allure-hermione": "^2.4.0",
     "chai": "^4.3.7",
-    "hermione": "5.3.1"
+    "hermione": "^7.1.0"
   }
 }
