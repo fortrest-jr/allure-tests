@@ -6,6 +6,6 @@
   "devDependencies": {
     "allure-hermione": "2.3.0",
     "chai": "^4.3.7",
-    "hermione": "5.3.1"
+    "hermione": "6.1.2"
   }
 }
