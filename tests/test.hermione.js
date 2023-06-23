@@ -2,25 +2,44 @@ const {assert} = require('chai');
 
 hermione.only.in(['chrome', 'chrome2']);
 it('should pass', async function() {
-    assert.equal(1, 1);
+
+    await this.browser.step(this.currentTest.id(), '1=1', () => {
+        assert.equal(1, 1);
+    });
+    this.browser.closeWindow();
 });
 
 it('should pass 2', async function() {
-    assert.equal(1, 1);
+    await this.browser.step(this.currentTest.id(), '1=1', () => {
+        assert.equal(1, 1);
+    });
+    this.browser.closeWindow();
 });
 
 it('should pass 3', async function() {
-    assert.equal(1, 1);
+    await this.browser.step(this.currentTest.id(), '1=1', () => {
+        assert.equal(1, 1);
+    });
+    this.browser.closeWindow();
 });
 
 it('should pass 4', async function() {
-    assert.equal(1, 1);
+    await this.browser.step(this.currentTest.id(), '1=1', () => {
+        assert.equal(1, 1);
+    });
+    this.browser.closeWindow();
 });
 
 it('should pass 5', async function() {
-    assert.equal(1, 1);
+    await this.browser.step(this.currentTest.id(), '1=1', () => {
+        assert.equal(1, 1);
+    });
+    this.browser.closeWindow();
 });
 
 it('should pass 6', async function() {
-    assert.equal(1, 1);
+    await this.browser.step(this.currentTest.id(), '1=1', () => {
+        assert.equal(1, 1);
+    });
+    this.browser.closeWindow();
 });

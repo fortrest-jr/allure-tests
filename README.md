@@ -7,6 +7,3 @@ repo to reproduce bugs in allure-hermione: https://github.com/allure-framework/a
 
 ### To reproduce https://github.com/allure-framework/allure-js/issues/656
 1. `npm run test`
-
-### To reproduce https://github.com/allure-framework/allure-js/issues/655
-1. `npm run test_trow`
