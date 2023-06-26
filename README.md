@@ -10,4 +10,4 @@ Repo to reproduce bugs in allure-hermione
 1. `npm run start_server`
 2. `npm test`
 
-**There is specified chrome version in servers scripts which may be necessary to reproduce bug, because this version is used in our repos. But maybe latest version is still appliable, then you need to edit _server scripts.**
+**There is specified chrome version in _servers scripts in package.json, because this version is used in our repos. But maybe latest version is still appliable, then you need to edit _server scripts.**
