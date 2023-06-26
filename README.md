@@ -6,7 +6,7 @@ Repo to reproduce bugs in allure-hermione
 2. `npm install`
 3. `npm run install_server`
 
-### To reproduce https://github.com/allure-framework/allure-js/issues/706
+### To reproduce https://github.com/allure-framework/allure-js/issues/708
 1. `npm run start_server`
 2. `npm test`
 
