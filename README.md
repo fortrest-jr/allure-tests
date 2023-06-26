@@ -1,7 +1,7 @@
 # allure-tests
 Repo to reproduce bugs in allure-hermione
 
-### Precondditions:
+### Installation:
 1. `nvm install`
 2. `npm install`
 3. `npm run install_server`
