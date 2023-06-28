@@ -2,11 +2,11 @@
   "scripts": {
     "test": "hermione tests/test.hermione.js",
     "test_throw": "hermione tests/test_throw.hermione.js",
-    "install_server": "selenium-standalone install --drivers.chrome.version=112.0.5615.49",
-    "start_server": "selenium-standalone start --drivers.chrome.version=112.0.5615.49"
+    "server:install": "selenium-standalone install --drivers.chrome.version=112.0.5615.49",
+    "server:start": "selenium-standalone start --drivers.chrome.version=112.0.5615.49"
   },
   "devDependencies": {
-    "allure-hermione": "2.3.0",
+    "allure-hermione": "2.4.0",
     "chai": "^4.3.7",
     "hermione": "6.1.2",
     "selenium-standalone": "^8.3.0"
