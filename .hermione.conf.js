@@ -12,10 +12,5 @@ module.exports = {
                 browserName: 'chrome'
             },
         },
-    },
-    plugins: {
-        "allure-hermione": {
-            resultsDir: "./allure-results"
-        }
     }
 };
