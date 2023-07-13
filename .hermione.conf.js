@@ -17,7 +17,7 @@ module.exports = {
       resultsDir: "./allure-results",
     },
     "hermione-test-repeater": {
-      enabled: true,
+      enabled: false,
       repeat: 10,
       minRepeat: 10,
       maxRepeat: 100,
