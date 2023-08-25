@@ -4,10 +4,10 @@
     "test_throw": "hermione tests/test_throw.hermione.js"
   },
   "devDependencies": {
-    "allure-hermione": "^2.5.0",
     "chai": "^4.3.7",
-    "hermione": "5.3.1",
-    "hermione-test-repeater": "^0.0.8"
+    "hermione": "7.1.4",
+    "hermione-test-repeater": "^0.0.8",
+    "html-reporter": "^9.11.0"
   },
   "dependencies": {
     "sharp": "^0.32.2"

@@ -13,8 +13,8 @@ module.exports = {
     // },
   },
   plugins: {
-    "allure-hermione": {
-      resultsDir: "./allure-results",
+    "html-reporter/hermione": {
+      enabled: true,
     },
     "hermione-test-repeater": {
       enabled: false,
